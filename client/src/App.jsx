@@ -44,7 +44,7 @@ const ProtectedRoute = ({ allowedRoles, children }) => {
       }
 
       try {
-        const response = await axios.get("http://localhost:5000/api/auth/verify", {
+        const response = await axios.get("https://your-app.onrender.com/api/auth/verify", {
           headers: { Authorization: `Bearer ${token}` },
         });
         console.log("Token verification successful:", response.data);
